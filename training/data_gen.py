@@ -19,6 +19,8 @@ with mp_hands.Hands(
             continue
         image = cv2.imread(IMAGE_FILES[i])
         image = cv2.flip(np.rot90(image), 1)
+        cv2.imshow("image",image)
+        cv2.waitKey(1)
         results = hands.process(cv2.cvtColor(image, cv2.COLOR_BGR2RGB))
         
         if results.multi_hand_landmarks:
@@ -32,6 +34,7 @@ with mp_hands.Hands(
             skeleton.append(landmark)
 
         skeleton = np.asarray(skeleton)
+        print(skeleton.shape)
         #skeleton = np.rot90(skeleton)
         
         data.append(skeleton)
@@ -52,5 +55,5 @@ lbl = np.asarray(lbl)
 print(lbl.shape)
 print(data.shape)
 
-np.save('data.npy',data, True)
-np.save('lbl.npy',lbl, True)
+#np.save('data.npy',data, True)
+#np.save('lbl.npy',lbl, True)
