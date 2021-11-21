@@ -1,0 +1,192 @@
+Model: "sequential"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #
+=================================================================
+ conv1d (Conv1D)             (None, 7, 64)             1792
+ max_pooling1d (MaxPooling1D  (None, 5, 64)            0
+ )
+ batch_normalization (BatchN  (None, 5, 64)            256
+ ormalization)
+ conv1d_1 (Conv1D)           (None, 3, 128)            49280
+ max_pooling1d_1 (MaxPooling  (None, 1, 128)           0
+ 1D)
+ batch_normalization_1 (Batc  (None, 1, 128)           512
+ hNormalization)
+ dropout (Dropout)           (None, 1, 128)            0
+ flatten (Flatten)           (None, 128)               0
+ dense (Dense)               (None, 256)               33024
+ dense_1 (Dense)             (None, 64)                16448
+ dense_2 (Dense)             (None, 32)                2080
+ dense_3 (Dense)             (None, 32)                1056
+ dropout_1 (Dropout)         (None, 32)                0
+ dense_4 (Dense)             (None, 2)                 66
+=================================================================
+Total params: 104,514
+Trainable params: 104,130
+Non-trainable params: 384
+_________________________________________________________________
+compiling model
+Epoch 1/1000
+38/38 [==============================] - 1s 2ms/step - loss: 0.1650 - mse: 0.1650 - mae: 0.2840
+Epoch 2/1000
+38/38 [==============================] - 0s 1ms/step - loss: 0.1650 - mse: 0.1650 - mae: 0.2840
+Epoch 3/1000
+38/38 [==============================] - 0s 1ms/step - loss: 0.1650 - mse: 0.1650 - mae: 0.2840
+Epoch 4/1000
+38/38 [==============================] - 0s 1ms/step - loss: 0.1650 - mse: 0.1650 - mae: 0.2840
+Epoch 5/1000
+38/38 [==============================] - 0s 1ms/step - loss: 0.1650 - mse: 0.1650 - mae: 0.2840
+Epoch 6/1000
+38/38 [==============================] - 0s 1ms/step - loss: 0.1650 - mse: 0.1650 - mae: 0.2840
+Epoch 7/1000
+38/38 [==============================] - 0s 1ms/step - loss: 0.1650 - mse: 0.1650 - mae: 0.2840
+Epoch 8/1000
+38/38 [==============================] - 0s 1ms/step - loss: 0.1650 - mse: 0.1650 - mae: 0.2840
+Epoch 9/1000
+38/38 [==============================] - 0s 1ms/step - loss: 0.1650 - mse: 0.1650 - mae: 0.2840
+Epoch 10/1000
+38/38 [==============================] - 0s 1ms/step - loss: 0.1650 - mse: 0.1650 - mae: 0.2840
+Epoch 11/1000
+38/38 [==============================] - 0s 1ms/step - loss: 0.1650 - mse: 0.1650 - mae: 0.2840
+Epoch 12/1000
+38/38 [==============================] - 0s 2ms/step - loss: 0.1650 - mse: 0.1650 - mae: 0.2840
+Epoch 13/1000
+38/38 [==============================] - 0s 2ms/step - loss: 0.1650 - mse: 0.1650 - mae: 0.2840
+Epoch 14/1000
+29/38 [=====================>........] - ETA: 0s - loss: 0.1787 - mse: 0.1787 - mae: 0.3024
+2021-11-21 05:38:20.827462: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:939] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2021-11-21 05:38:20.827996: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcudart.so.11.0'; dlerror: libcudart.so.11.0: cannot open shared object file: No such file or directory
+2021-11-21 05:38:20.828097: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcublas.so.11'; dlerror: libcublas.so.11: cannot open shared object file: No such file or directory
+2021-11-21 05:38:20.828179: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcublasLt.so.11'; dlerror: libcublasLt.so.11: cannot open shared object file: No such file or directory
+2021-11-21 05:38:20.828261: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcufft.so.10'; dlerror: libcufft.so.10: cannot open shared object file: No such file or directory
+2021-11-21 05:38:20.828343: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcurand.so.10'; dlerror: libcurand.so.10: cannot open shared object file: No such file or directory
+2021-11-21 05:38:20.828419: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcusolver.so.11'; dlerror: libcusolver.so.11: cannot open shared object file: No such file or directory
+2021-11-21 05:38:20.828484: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcusparse.so.11'; dlerror: libcusparse.so.11: cannot open shared object file: No such file or directory
+2021-11-21 05:38:20.828539: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcudnn.so.8'; dlerror: libcudnn.so.8: cannot open shared object file: No such file or directory
+2021-11-21 05:38:20.828556: W tensorflow/core/common_runtime/gpu/gpu_device.cc:1850] Cannot dlopen some GPU libraries. Please make sure the missing libraries mentioned above are installed properly if you would like to use GPU. Follow the guide at https://www.tensorflow.org/install/gpu for how to download and setup the required libraries for your platform.
+Skipping registering GPU devices...
+2021-11-21 05:38:20.828834: I tensorflow/core/platform/cpu_feature_guard.cc:151] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+38/38 [==============================] - 0s 2ms/step - loss: 0.1650 - mse: 0.1650 - mae: 0.2840
+Epoch 15/1000
+38/38 [==============================] - 0s 2ms/step - loss: 0.1650 - mse: 0.1650 - mae: 0.2840
+Epoch 16/1000
+38/38 [==============================] - 0s 2ms/step - loss: 0.1650 - mse: 0.1650 - mae: 0.2840
+Epoch 17/1000
+38/38 [==============================] - 0s 2ms/step - loss: 0.1650 - mse: 0.1650 - mae: 0.2840
+Epoch 18/1000
+38/38 [==============================] - 0s 2ms/step - loss: 0.1650 - mse: 0.1650 - mae: 0.2840
+Epoch 19/1000
+38/38 [==============================] - 0s 2ms/step - loss: 0.1650 - mse: 0.1650 - mae: 0.2840
+Epoch 20/1000
+38/38 [==============================] - 0s 2ms/step - loss: 0.1650 - mse: 0.1650 - mae: 0.2840
+Epoch 21/1000
+38/38 [==============================] - 0s 2ms/step - loss: 0.1650 - mse: 0.1650 - mae: 0.2840
+Epoch 22/1000
+38/38 [==============================] - 0s 2ms/step - loss: 0.1650 - mse: 0.1650 - mae: 0.2840
+Epoch 23/1000
+38/38 [==============================] - 0s 2ms/step - loss: 0.1650 - mse: 0.1650 - mae: 0.2840
+Epoch 24/1000
+38/38 [==============================] - 0s 2ms/step - loss: 0.1650 - mse: 0.1650 - mae: 0.2840
+Epoch 25/1000
+38/38 [==============================] - 0s 2ms/step - loss: 0.1650 - mse: 0.1650 - mae: 0.2840
+Epoch 26/1000
+38/38 [==============================] - 0s 2ms/step - loss: 0.1650 - mse: 0.1650 - mae: 0.2840
+Epoch 27/1000
+38/38 [==============================] - 0s 1ms/step - loss: 0.1650 - mse: 0.1650 - mae: 0.2840
+Epoch 28/1000
+38/38 [==============================] - 0s 2ms/step - loss: 0.1650 - mse: 0.1650 - mae: 0.2840
+Epoch 29/1000
+38/38 [==============================] - 0s 1ms/step - loss: 0.1650 - mse: 0.1650 - mae: 0.2840
+Epoch 30/1000
+38/38 [==============================] - 0s 2ms/step - loss: 0.1650 - mse: 0.1650 - mae: 0.2840
+Epoch 31/1000
+38/38 [==============================] - 0s 1ms/step - loss: 0.1650 - mse: 0.1650 - mae: 0.2840
+Epoch 32/1000
+38/38 [==============================] - 0s 1ms/step - loss: 0.1650 - mse: 0.1650 - mae: 0.2840
+Epoch 33/1000
+38/38 [==============================] - 0s 1ms/step - loss: 0.1650 - mse: 0.1650 - mae: 0.2840
+Epoch 34/1000
+38/38 [==============================] - 0s 1ms/step - loss: 0.1650 - mse: 0.1650 - mae: 0.2840
+Epoch 35/1000
+38/38 [==============================] - 0s 1ms/step - loss: 0.1650 - mse: 0.1650 - mae: 0.2840
+Epoch 36/1000
+38/38 [==============================] - 0s 1ms/step - loss: 0.1650 - mse: 0.1650 - mae: 0.2840
+Epoch 37/1000
+38/38 [==============================] - 0s 1ms/step - loss: 0.1650 - mse: 0.1650 - mae: 0.2840
+Epoch 38/1000
+38/38 [==============================] - 0s 1ms/step - loss: 0.1650 - mse: 0.1650 - mae: 0.2840
+Epoch 39/1000
+38/38 [==============================] - 0s 1ms/step - loss: 0.1650 - mse: 0.1650 - mae: 0.2840
+Epoch 40/1000
+38/38 [==============================] - 0s 1ms/step - loss: 0.1650 - mse: 0.1650 - mae: 0.2840
+Epoch 41/1000
+38/38 [==============================] - 0s 1ms/step - loss: 0.1650 - mse: 0.1650 - mae: 0.2840
+Epoch 42/1000
+38/38 [==============================] - 0s 1ms/step - loss: 0.1650 - mse: 0.1650 - mae: 0.2840
+Epoch 43/1000
+38/38 [==============================] - 0s 1ms/step - loss: 0.1650 - mse: 0.1650 - mae: 0.2840
+Epoch 44/1000
+38/38 [==============================] - 0s 1ms/step - loss: 0.1650 - mse: 0.1650 - mae: 0.2840
+Epoch 45/1000
+38/38 [==============================] - 0s 1ms/step - loss: 0.1650 - mse: 0.1650 - mae: 0.2840
+Epoch 46/1000
+38/38 [==============================] - 0s 1ms/step - loss: 0.1650 - mse: 0.1650 - mae: 0.2840
+Epoch 47/1000
+38/38 [==============================] - 0s 2ms/step - loss: 0.1650 - mse: 0.1650 - mae: 0.2840
+Epoch 48/1000
+38/38 [==============================] - 0s 1ms/step - loss: 0.1650 - mse: 0.1650 - mae: 0.2840
+Epoch 49/1000
+38/38 [==============================] - 0s 1ms/step - loss: 0.1650 - mse: 0.1650 - mae: 0.2840
+Epoch 50/1000
+38/38 [==============================] - 0s 2ms/step - loss: 0.1650 - mse: 0.1650 - mae: 0.2840
+Epoch 51/1000
+38/38 [==============================] - 0s 2ms/step - loss: 0.1650 - mse: 0.1650 - mae: 0.2840
+Epoch 52/1000
+38/38 [==============================] - 0s 2ms/step - loss: 0.1650 - mse: 0.1650 - mae: 0.2840
+Epoch 53/1000
+38/38 [==============================] - 0s 2ms/step - loss: 0.1650 - mse: 0.1650 - mae: 0.2840
+Epoch 54/1000
+38/38 [==============================] - 0s 2ms/step - loss: 0.1650 - mse: 0.1650 - mae: 0.2840
+Epoch 55/1000
+38/38 [==============================] - 0s 2ms/step - loss: 0.1650 - mse: 0.1650 - mae: 0.2840
+Epoch 56/1000
+38/38 [==============================] - 0s 2ms/step - loss: 0.1650 - mse: 0.1650 - mae: 0.2840
+Epoch 57/1000
+38/38 [==============================] - 0s 2ms/step - loss: 0.1650 - mse: 0.1650 - mae: 0.2840
+Epoch 58/1000
+38/38 [==============================] - 0s 2ms/step - loss: 0.1650 - mse: 0.1650 - mae: 0.2840
+Epoch 59/1000
+38/38 [==============================] - 0s 1ms/step - loss: 0.1650 - mse: 0.1650 - mae: 0.2840
+Epoch 60/1000
+38/38 [==============================] - 0s 2ms/step - loss: 0.1650 - mse: 0.1650 - mae: 0.2840
+Epoch 61/1000
+38/38 [==============================] - 0s 2ms/step - loss: 0.1650 - mse: 0.1650 - mae: 0.2840
+Epoch 62/1000
+38/38 [==============================] - 0s 2ms/step - loss: 0.1650 - mse: 0.1650 - mae: 0.2840
+Epoch 63/1000
+ 1/38 [..............................] - ETA: 0s - loss: 0.4548 - mse: 0.4548 - mae: 0.5018
+38/38 [==============================] - 0s 2ms/step - loss: 0.1650 - mse: 0.1650 - mae: 0.2840
+Traceback (most recent call last):
+  File "/sata/code/limestone/train.py", line 56, in <module>
+    model.fit(data, labls, BATCHES, EPOCHS, shuffle=True, callbacks=[WandbCallback()])
+  File "/home/james/.local/lib/python3.9/site-packages/wandb/integration/keras/keras.py", line 168, in new_v2
+    return old_v2(*args, **kwargs)
+  File "/home/james/.local/lib/python3.9/site-packages/keras/utils/traceback_utils.py", line 64, in error_handler
+    return fn(*args, **kwargs)
+  File "/home/james/.local/lib/python3.9/site-packages/keras/engine/training.py", line 1216, in fit
+    tmp_logs = self.train_function(iterator)
+  File "/home/james/.local/lib/python3.9/site-packages/tensorflow/python/util/traceback_utils.py", line 150, in error_handler
+    return fn(*args, **kwargs)
+  File "/home/james/.local/lib/python3.9/site-packages/tensorflow/python/eager/def_function.py", line 910, in __call__
+    result = self._call(*args, **kwds)
+  File "/home/james/.local/lib/python3.9/site-packages/tensorflow/python/eager/def_function.py", line 942, in _call
+    return self._stateless_fn(*args, **kwds)  # pylint: disable=not-callable
+  File "/home/james/.local/lib/python3.9/site-packages/tensorflow/python/eager/function.py", line 3130, in __call__
+    return graph_function._call_flat(
+  File "/home/james/.local/lib/python3.9/site-packages/tensorflow/python/eager/function.py", line 1959, in _call_flat
+    return self._build_call_outputs(self._inference_function.call(
+  File "/home/james/.local/lib/python3.9/site-packages/tensorflow/python/eager/function.py", line 598, in call
+    outputs = execute.execute(
+  File "/home/james/.local/lib/python3.9/site-packages/tensorflow/python/eager/execute.py", line 58, in quick_execute
+    tensors = pywrap_tfe.TFE_Py_Execute(ctx._handle, device_name, op_name,
+KeyboardInterrupt
